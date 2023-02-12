@@ -1,0 +1,16 @@
+{{- if .Values.knative.serving.enabled }}
+apiVersion: operator.knative.dev/v1beta1
+kind: KnativeServing
+metadata:
+  name: {{ include "humio-instance.fullname" . }}
+spec:
+  # ...
+  ingress:
+    istio:
+      enabled: false  
+    kourier:
+      enabled: true  
+  config:
+    network:
+      ingress-class: "alb"      
+{{- end }}
