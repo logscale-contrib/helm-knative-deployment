@@ -12,5 +12,5 @@ spec:
       enabled: true  
   config:
     network:
-      ingress-class: "alb"      
+      ingress-class: "kourier.ingress.networking.knative.dev"     
 {{- end }}
