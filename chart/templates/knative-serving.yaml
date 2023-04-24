@@ -5,6 +5,25 @@ metadata:
   name: {{ include "knative-deployment.fullname" . }}
 spec:
   # ...
+  high-availability:
+    replicas: 2  
+  resources:
+  - container: activator
+    requests:
+      cpu: 300m
+      memory: 100Mi
+    limits:
+      cpu: 1000m
+      memory: 250Mi
+      ephemeral-storage: 4Gi
+  - container: autoscaler
+    requests:
+      cpu: 300m
+      memory: 100Mi
+    limits:
+      cpu: 1000m
+      memory: 250Mi
+      ephemeral-storage: 4Gi    
   ingress:
     istio:
       enabled: false  
@@ -13,4 +32,6 @@ spec:
   config:
     network:
       ingress-class: "kourier.ingress.networking.knative.dev"     
+    autoscaler:
+      enable-scale-to-zero: "true"      
 {{- end }}
