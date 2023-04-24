@@ -3,6 +3,16 @@ entries:
   knative-deployment:
   - apiVersion: v2
     appVersion: 1.9.0
+    created: "2023-04-24T17:19:15.6940968Z"
+    description: A Helm chart for Kubernetes
+    digest: 0df6e0fd9c95c5703ef34fe6e2d3f13624ece4f787c68eb2ba72f4d20d4b77bb
+    name: knative-deployment
+    type: application
+    urls:
+    - https://github.com/logscale-contrib/helm-knative-deployment/releases/download/v1.1.1/knative-deployment-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
+    appVersion: 1.9.0
     created: "2023-04-24T14:53:47.460698982Z"
     description: A Helm chart for Kubernetes
     digest: 69ec2efde75d6016215935f9a37529b6d6883e8c53d8cd78566cfb831e681845
@@ -41,4 +51,4 @@ entries:
     urls:
     - https://github.com/logscale-contrib/helm-knative-deployment/releases/download/v1.0.0/knative-deployment-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-24T14:53:47.460350277Z"
+generated: "2023-04-24T17:19:15.693484754Z"
