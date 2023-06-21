@@ -24,17 +24,6 @@ spec:
       labelSelector:
         matchLabels:
           app: activator          
-  workloads:
-  - container: activator
-    resources:
-      requests:
-        cpu: 300m
-        memory: 100Mi
-  - container: autoscaler
-    resources:
-      requests:
-        cpu: 300m
-        memory: 100Mi
   ingress:
     istio:
       enabled: false  
